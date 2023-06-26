@@ -5,6 +5,8 @@ import 'package:febe_frontend/screens/home_screen/home_screen.dart';
 import 'package:febe_frontend/screens/login_screen/login_screen.dart';
 import 'package:febe_frontend/screens/user_details_form_screen/user_details_form_screen.dart';
 import 'package:febe_frontend/screens/user_type_screen/user_type_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -33,6 +35,21 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    getToken();
+    super.initState();
+  }
+
+  void getToken() async {
+    await Firebase.initializeApp();
+    FirebaseMessaging _firebaseMessaging =
+        FirebaseMessaging.instance; // Change here
+    _firebaseMessaging.getToken().then((token) {
+      print("token is $token");
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(

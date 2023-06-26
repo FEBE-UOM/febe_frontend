@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "534159692609",
+    "project_id": "febe-7a7ae",
+    "storage_bucket": "febe-7a7ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534159692609:android:d76ce7aa9472ea5552c7c0",
+        "android_client_info": {
+          "package_name": "the.underdogsapp.febe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534159692609-jdqaiudqfappsqpimhlvpsua1ffsl4sv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSHxNa-MBPAF5dZT5d-ZoHETOTzgXPfbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534159692609-jdqaiudqfappsqpimhlvpsua1ffsl4sv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
