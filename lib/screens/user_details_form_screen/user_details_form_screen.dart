@@ -156,8 +156,15 @@ class _UserDetailsFormScreenState extends State<UserDetailsFormScreen> {
     }
 
     bool isValid() {
+
+      bool validity = !(!isOptional && isDirty);
+      return validity;
+    }
+
+    bool isDesignationValid() {
+
       bool validity = !(!isOptional && isDirty && designation.trim() == "");
-      return false;
+      return validity;
     }
 
     void onFocused() {
@@ -190,6 +197,7 @@ class _UserDetailsFormScreenState extends State<UserDetailsFormScreen> {
         body: GestureDetector(
          
           onTap: () {
+            isDirty = true;
             focus.unfocus();
           },
           child: Container(
@@ -318,10 +326,10 @@ class _UserDetailsFormScreenState extends State<UserDetailsFormScreen> {
                             borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: AppColors.red)),
                         hintText: "Select the Desgination",
-                        errorText: isValid() ? null : "* required",
+                        errorText: isDesignationValid() ? null : "* required",
                         errorStyle: const TextStyle(height: 0),
                         hintStyle: AppTextStyles.regularBeVietnamPro16
-                            .copyWith(color: AppColors.lightWhite),
+                            .copyWith(color: AppColors.extraLightBlack),
                       ),
                       suggestionStyle: AppTextStyles.regularBeVietnamPro16
                           .copyWith(color: AppColors.lightBlack),
