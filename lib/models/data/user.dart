@@ -3,6 +3,7 @@ import 'entrepreneur.dart';
 import 'location.dart';
 
 class User {
+  String? sId;
   String? name;
   String? phoneNumber;
   bool? isSignupCompleted;
@@ -15,7 +16,8 @@ class User {
   DateTime? dob;
 
   User(
-      {this.name,
+      {this.sId,
+      this.name,
       this.phoneNumber,
       this.isSignupCompleted,
       this.type,
@@ -26,6 +28,7 @@ class User {
       this.updatedAt});
 
   User.fromJson(Map<String, dynamic> json) {
+    sId = json['_id'];
     name = json['name'];
     phoneNumber = json['phoneNumber'];
     isSignupCompleted = json['isSignupCompleted'];
