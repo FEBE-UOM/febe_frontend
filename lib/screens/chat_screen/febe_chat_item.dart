@@ -1,3 +1,5 @@
+import 'package:febe_frontend/models/data/all_chats_data_model.dart';
+import 'package:febe_frontend/models/data/user.dart';
 import 'package:flutter/material.dart';
 
 import '../../configs/resources.dart';
@@ -12,7 +14,7 @@ class FebeChatItem extends StatelessWidget {
       Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => const ChatScreen(
+              builder: (context) => ChatScreen( currentUser: User(),
                   name: "FEBE", isVerified: true, isFEBE: true)));
     }
 

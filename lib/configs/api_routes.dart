@@ -10,5 +10,8 @@ class ApiRoutes {
   static String fileBase = "$baseUrl/api/files";
   static String finderBase = "$baseUrl/api/finder";
   static String location = "$userBase/location";
+  static String chatBase = "$baseUrl/api/chats";
+  static String chatMessage = "$chatBase/{chatId}/messages?expand=true";
+  static String sockeServertUrl = baseUrl;
 }
  
